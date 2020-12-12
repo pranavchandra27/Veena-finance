@@ -67,10 +67,20 @@
           <div class="form-card">
             <h3>How much do you want?</h3>
             <p>We provide instant cash loans.</p>
-            <form>
-              <input type="text" placeholder="Amount" />
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Email" />
+            <form
+              name="loan"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+            >
+              <input
+                required
+                type="text"
+                name="amount"
+                placeholder="Amount in rupees"
+              />
+              <input required type="text" name="name" placeholder="Your Name" />
+              <input required type="email" name="email" placeholder="Email" />
               <button type="submit">Submit</button>
             </form>
           </div>
@@ -185,18 +195,18 @@
           data-netlify="true"
           data-netlify-recaptcha="true"
         >
-          <input type="text" name="name" placeholder="Your name" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="tel" name="phone" placeholder="Phone no." />
-          <input type="text" name="purpose" placeholder="Purpose" />
-          <input type="text" name="amount" placeholder="Amount" />
+          <input required type="text" name="name" placeholder="Your name" />
+          <input required type="email" name="email" placeholder="Email" />
+          <input required type="tel" name="phone" placeholder="Phone no." />
+          <input required type="text" name="purpose" placeholder="Purpose" />
+          <input required type="text" name="amount" placeholder="Amount" />
           <textarea
             name="message"
             placeholder="Write your message to us"
             cols="30"
             rows="10"
           ></textarea>
-
+          <div data-netlify-recaptcha="true"></div>
           <button type="submit">Submit</button>
         </form>
       </div>
