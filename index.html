@@ -179,7 +179,12 @@
       <p>Send us your query and we'll get back to you as soon as possible</p>
 
       <div class="query-form">
-        <form action="POST" data-netlify="true">
+        <form
+          method="POST"
+          name="contact"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+        >
           <input type="text" name="name" placeholder="Your name" />
           <input type="email" name="email" placeholder="Email" />
           <input type="tel" name="phone" placeholder="Phone no." />
